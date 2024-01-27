@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="/src/sass/main.scss">
+    <link rel="stylesheet" href="/output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Bree+Serif&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evolve</title>
+</head>
+
+<body class=" bg-blue-dark box-border font-secundario transition-[0.6s] ">
+
+    <header class="fixed top-0 left-0 z-50 w-full">
+        <nav class=" main-nav  flex justify-between items-center w-[98%] mx-auto overflow-hidden py-2 bg-bg-1 ">
+            <div
+                class=" logo__bg px-5 w-2/4  h-14 rounded-e-3xl  bg-gradient-to-r from-grad-1 via-grad-2 to-grad-3  flex ">
+                <img src="/public/logo-nav.svg" alt="logo" class=" w-36  h-auto  ">
+            </div>
+
+            <div class="nav__links px-5 max-md:invisible   ">
+                <ul class="flex items-center gap-[4vw]  ">
+                    <li><a href="#" class="text-text-white ">Home </a></li>
+                    <li><a href="#" class="text-text-white  ">Service</a></li>
+                    <li><a href="#" class="text-text-white  ">About me</a></li>
+                    <li><a href="#" class="text-text-white  ">Contact us</a></li>
+                </ul>
+            </div>
+
+        </nav>
+
+        <div class="visible-mobile  hidden-mobile  bg-gradient-to-r from-grad-1  via-grad-3   to-grad-4  ">
+            <ul class="flex justify-between  ">
+                <li><a href="#" class=" cursor-pointer"><iconify-icon width="1.8em"
+                            icon="uiw:home"></iconify-icon></a></iconify-icon></li>
+                <li><a href="#" class=" cursor-pointer "><iconify-icon width="1.8em" icon="uiw:cut"></iconify-icon></a>
+                </li>
+                <li><a href="#" class=" cursor-pointer "><iconify-icon width="1.8em"
+                            icon="uiw:smile-o"></iconify-icon></a></li>
+                <li><a href="#" class="  cursor-pointer"><iconify-icon width="1.8em"
+                            icon="streamline:chat-bubble-typing-oval"></iconify-icon></a></li>
+            </ul>
+        </div>
+
+
+    </header>
+
+    <div class="container mx-auto bg-blue-dark  pt-8">
+
+        <section id="hero" class="w-[96%] 
+         mx-auto overflow-hidden
+          max-w-screen[1400px] 
+        grid  lg:grid-cols-2 gap-10 content-center
+         relative  mt-8 ">
+
+            <div class="hero__left  w-11/12 max-w-lg   bg-blue-light rounded-ee-[200px] rounded-ss-[200px] p-6 
+            ">
+                <div class="hero-titles ">
+                    <img src="/public/logo-hero.svg" alt="logo" class="hero__logo mb-7 p-6">
+                    <h1 class="hero__title font-principal  w-[26rem] text-8xl text-text-white">Barber Studio</h1>
+                    <h2 class="hero___subtitle text-destacado    text-3xl mb-8  ">“Evolve The Way You Think”</h2>
+
+                </div>
+
+                <div class="hero__copy-btn">
+                    <p class="text-2xl text-text-white shadow-sm mb-8  break-words max-w-sm">“Working with clients,
+                        getting them to look
+                        their best one by one! Come enjoy
+                        a
+                        great cut with the best attention, just as you deserve!”
+                    </p>
+                    <button class="w-40 h-8 bg-grad-1 rounded-md">Book Now</button>
+                </div>
+            </div>
+
+            <img id="chair" class=" max-xl:hidden      w-[38rem]  h-auto absolute top-[30%] left-[33%] z-10 b  "
+                src="/public/chair.png" alt="chair">
+
+            <div id="hero__right"
+                class=" overflow-hidden  grid justify-end  h-[42.75em]   rounded-se-[200px] rounded-xl   relative ">
+                <div class=" w-full ">
+                    <video class=" brightness-75" autoplay>
+                        <source src="/public/video-loop.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <p class="absolute 
+                bottom-20
+                left-[33%]
+                  text-3xl
+                   font-secundario
+                    text-text-white shadow-sm
+                    w-full text-center h-20 bg-blue-light flex  pl-10 items-center">What we do <span
+                        class="text-destacado pl-4"> for you?</span>
+                </p>
+            </div>
+
+            <div class="max-xl:hidden  w-full h-48  bg-text-white lg:col-span-2 "></div>
+        </section>
+
+        <section id="service" class="w-full  p-4 ">
+
+            <article class="mt-10">
+                <div class="mb-12">
+                    <h2 class="text-8xl max-sm:text-5xl font-principal text-text-white">our services <span
+                            class="border-line "></span></h2>
+                    <p class="text-text-white text-3xl ">All haircuts come with hot towell / massage service</p>
+                </div>
+            </article>
+
+            <article id="cards">
+                <div id=" content-cards" class=" w-full max-w-6xl m-auto grid lg:grid-cols-3  gap-10 justify-center ">
+
+                    <div id="card-1  " class="card ">
+                        <img src="/public/icon-scissor.svg" alt="scisor icon" class="mb-8">
+
+                        <div class=" div-tex__card   gap-3 mb-8  ">
+                            <p class="service ">hair cut </p>
+                            <span class="border-line  "></span>
+                            <p class="price">$75</p>
+                        </div>
+                        <div class="div-tex__card gap-3 ">
+                            <p class=" capitalize service ">Lineup/hapeup </p>
+                            <span class="border-line "></span>
+                            <p class="price">$50</p>
+                        </div>
+
+                    </div>
+
+                    <div id="card-2" class="card ">
+                        <img src="/public/icon-bear.svg" alt="beard icon" class="mb-8">
+
+                        <div class="text-1 div-tex__card">
+                            <p class=" service ">hair cut with beard</p>
+                            <span class="border-line "></span>
+                            <p class="price ">$75</p>
+                        </div>
+
+                    </div>
+
+                    <div id="card-3" class="card">
+                        <img src="/public/icon-motocicle.svg" alt="moto icon" class="mb-8">
+
+                        <div class="text-1 div-tex__card ">
+                            <p class="service ">House calls </p>
+                            <span class="border-line "></span>
+                            <p class="price">$75</p>
+                        </div>
+
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section id="about-me " class=" lg:grid grid-cols-2 content-center w-[96%] m-auto h-screen">
+            <article id="date " class="w-96% m-auto p-8">
+                <span class="border-line   "></span>
+                <h2 class="text-8xl max-sm:text-5xl font-principal text-text-white  ">About Me</h2>
+                <div class="">
+                    <p class="text-4xl max-sm:text-3xl text-text-white font-secundario  ">Wislow Estevez</p>
+                    <p class="text-3xl max-sm:text-3xl text-destacado font-secundario capitalize mb-8">master Barber</p>
+                </div>
+                <p class="text-3xl max-sm:text-2xl  text-text-white font-secundario  mb-4">Renew your style in our salon
+                    with "Evolve The Way You Think"! Break barriers, discover
+                    new trends and be the creator of your own image. With innovative techniques, transform your
+                    hair and boost your confidence. Discover a world of hair possibilities and embrace your style
+                    only! 💇‍♀️💇‍♂️✨</p>
+                <a href="https://www.instagram.com/barber_winz/"
+                    class="flex  text-text-white text-2xl  hover:text-color-hover  gap-1 " target="_blank"><img
+                        src="/public/lets-icons_insta-light.svg" alt="instagram-logo">@barber_winz</a>
+            </article>
+
+
+            <article id="galery" class="lg:w-[43.75em] m-auto ">
+
+                <div class=" grid lg:grid-cols-2 grid-rows-1 gap-1   ">
+                    <figure class="relative  overflow-hidden hover:cursor-pointer max-w-[500px] m-auto "><img
+                            class=" images__about  m-auto scale-[1.2] transition-transform  "
+                            src="/public/avatar1.jpg" alt="Barber">
+                        <figcaption class=" absolute  inset-0 flex flex-col justify-end 
+                              text-text-white
+                               text-2xl
+                                   before:content['']
+                                    before:absolute
+                                     before:top-0
+                                      before:inset-0
+                                       before:bg-gradient-to-l
+                                        from-grad-5
+                                           to-[#151618]
+                                              before:opacity-0  before:transition-opacity   opacity-0 "><main class="flex flex-end "><p class="font-secundario w-[20rem]">"With each cut, you sculpt stories into each strand of hair, creating masterpieces on blank heads."</p></main><footer class="text-destacado text-2xl font-secundario">Wislow Estevez</footer> </figcaption>
+                    </figure>
+                    <figure><img class="images__about max-w-[500px] m-auto " src="/public/Avatar2.jpg" alt="Barber">
+                    </figure>
+                    <figure><img class="images__about max-w-[500px] m-auto" src="/public/Avatar3.jpg" alt="Barber">
+                    </figure>
+                    <figure><img class="images__about max-w-[500px] m-auto" src="/public/Avatar4.jpg" alt="Barber">
+                    </figure>
+                </div>
+
+            </article>
+
+
+        </section>
+    </div>
+</body>
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+<style>
+
+    figure:hover img{
+        transform: scale(1);
+    }
+
+    figure figcaption:hover{
+        opacity: 1;
+        
+       
+    }
+
+    figure:hover figcaption::before{
+        opacity: 1;
+        
+    }
+    @media (max-width: 764px) {
+        .visible-mobile {
+            position: absolute;
+            top: 980%;
+            left: 6%;
+            display: grid;
+            align-items: center;
+
+
+            width: 88vw;
+            height: 54px;
+            padding: 5px;
+
+
+            border-radius: 10px;
+
+        }
+
+
+    }
+
+
+
+    @media (min-width: 765px) {
+        .hidden-mobile {
+            display: none;
+        }
+    }
+</style>
+
+</html>
+
+<!-- npx tailwindcss -i ./src/input.css -o ./output.css --watch -->
