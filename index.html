@@ -11,41 +11,175 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Evolve</title>
 </head>
+<!-- extra desing css -->
+<style>
+/* nav-bar */
+nav {
+    z-index: 50;
+    position: fixed;
+    bottom: 5%;
+    width: 400px;
+    background-color:#1C1F2A;
+    left: 56%;
+    margin-left:-228px ;
+    padding: 0 2em;
+    border-radius: 40px;
+    border-radius: 40px;
+background: #1C1F2A;
+box-shadow:  10px 10px 18px #12141c,
+             -2px -2px 5px #262a38;
 
-<body class=" bg-blue-dark box-border font-secundario transition-[0.6s] ">
+ 
+                            
+}
+ 
+nav ul{
+    display: flex;
+    align-items: center;
+}
 
-    <header class="fixed top-0 left-0 z-50 w-full">
-        <nav class=" main-nav  flex justify-between items-center w-[98%] mx-auto overflow-hidden py-2 bg-bg-1 ">
-            <div
-                class=" logo__bg px-5 w-2/4  h-14 rounded-e-3xl  bg-gradient-to-r from-grad-1 via-grad-2 to-grad-3  flex ">
-                <img src="/public/logo-nav.svg" alt="logo" class=" w-36  h-auto  ">
-            </div>
+nav :where(li, a) {
+position: relative;
+}
 
-            <div class="nav__links px-5 max-md:invisible   ">
-                <ul class="flex items-center gap-[4vw]  ">
-                    <li><a href="#" class="text-text-white ">Home </a></li>
-                    <li><a href="#" class="text-text-white  ">Service</a></li>
-                    <li><a href="#" class="text-text-white  ">About me</a></li>
-                    <li><a href="#" class="text-text-white  ">Contact us</a></li>
-                </ul>
-            </div>
+nav ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+    padding: .5em;
+    font-size: 0.8em;
+    line-height: 1.8;
+    width: 90px;
+    height: 80px;
+    color: #f2f2f2;
+    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    }
 
-        </nav>
+    nav ul li a:hover{
+        color: #101820;
+    }
+    nav ul li a span{
+        font-size: 12px;
+    }
+/* animation */
+nav li::before, nav li::after{
+    content: "";
+    position: absolute;
+    top: 1px;
+    height: 100%;
+    width: 30px;
+    /* background-color: red; */
 
-        <div class="visible-mobile  hidden-mobile  bg-gradient-to-r from-grad-1  via-grad-3   to-grad-4  ">
-            <ul class="flex justify-between  ">
-                <li><a href="#" class=" cursor-pointer"><iconify-icon width="1.8em"
-                            icon="uiw:home"></iconify-icon></a></iconify-icon></li>
-                <li><a href="#" class=" cursor-pointer "><iconify-icon width="1.8em" icon="uiw:cut"></iconify-icon></a>
-                </li>
-                <li><a href="#" class=" cursor-pointer "><iconify-icon width="1.8em"
-                            icon="uiw:smile-o"></iconify-icon></a></li>
-                <li><a href="#" class="  cursor-pointer"><iconify-icon width="1.8em"
-                            icon="streamline:chat-bubble-typing-oval"></iconify-icon></a></li>
-            </ul>
+}
+
+nav li.active::before{
+    left: -20px;
+    border-radius:  0 0 30px 0;
+}
+
+nav li.active::after{
+    right: -20px;
+    border-radius:  0 0 0 30px;
+}
+nav li.active::before, nav li.active::after{
+    background-color:  #1C1F2A;
+}
+
+
+nav li.active a::before, nav li.active a::after{
+    content: "";
+    position: absolute;
+    background-color: #D9A648;
+    z-index:-1;
+}
+
+nav li.active  a::before {
+    top: 0px;
+    left: 10px;
+    width: calc(100% - 20px);
+    height: 100%;
+    border-radius: 30px 30px 0 0 ;
+}
+
+nav li.active a::after{
+    left: -6px;
+    bottom: 10px; 
+    width: 100px;
+    height: 40px;
+
+}
+
+nav li.active a {
+    color: rgba(28, 31, 42, 0.67);
+
+}
+
+/* nav-bar */
+    figure:hover img {
+        transform: scale(1);
+    }
+
+    figure figcaption:hover {
+        opacity: 1;
+
+
+    }
+
+    figure:hover figcaption::before {
+        opacity: 1;
+        z-index: 5;
+    }
+
+    figure:hover figcaption p {
+        z-index: 10;
+    }
+
+    @media (max-width: 764px) {
+        .visible-mobile {
+            position: absolute;
+            top: 90%;
+            left: 6%;
+            display: grid;
+            align-items: center;
+            box-shadow: 5px 10px 20px rgba(21, 22, 24, 100%);
+
+            width: 88vw;
+            height: 54px;
+            padding: 5px;
+
+
+            border-radius: 10px;
+
+        }
+
+
+    }
+
+
+
+    @media (min-width: 765px) {
+        .hidden-mobile {
+            display: none;
+        }
+    }
+</style>
+<!-- extra desing css -->
+
+<body class=" bg-blue-dark box-border font-secundario  ">
+    <header>
+        <div class=" logo__bg px-5 w-2/4  h-14 rounded-e-3xl  bg-gradient-to-r from-grad-1 via-grad-2 to-grad-3 mt-5">
+            <img src="/public/logo-nav.svg" alt="logo" class=" w-36  h-auto  ">
         </div>
-
-
+        <nav class=" ">
+            <ul class=" ">
+                <li class="active"><a href="#" class=" cursor-pointer"><iconify-icon width="1.8em" icon="uiw:home"></iconify-icon><span>Home</span></a></li>
+                <li><a href="#" class=" cursor-pointer "><iconify-icon width="1.8em" icon="uiw:cut"></iconify-icon><Span>Service</Span></a></li>
+                <li><a href="#" class=" cursor-pointer "><iconify-icon width="1.8em" icon="uiw:smile-o"></iconify-icon> <span>About me</span></a></li>
+                <li><a href="#" class="  cursor-pointer"><iconify-icon width="1.8em" icon="streamline:chat-bubble-typing-oval"></iconify-icon><span>Contac us</span></a></li>
+            </ul>
+        </nav>
     </header>
 
     <div class="container mx-auto bg-blue-dark  pt-8">
@@ -56,13 +190,12 @@
         grid  lg:grid-cols-2 gap-10 content-center
          relative  mt-8 ">
 
-            <div class="hero__left  w-11/12 max-w-lg   bg-blue-light rounded-ee-[200px] rounded-ss-[200px] p-6 
-            ">
+            <div class="hero__left w-11/12 max-w-lg   bg-blue-light rounded-ee-[200px] rounded-ss-[200px]  p-4 ">
+
                 <div class="hero-titles ">
                     <img src="/public/logo-hero.svg" alt="logo" class="hero__logo mb-7 p-6">
-                    <h1 class="hero__title font-principal  w-[26rem] text-8xl text-text-white">Barber Studio</h1>
-                    <h2 class="hero___subtitle text-destacado    text-3xl mb-8  ">“Evolve The Way You Think”</h2>
-
+                    <h1 class=" font-principal  w-[26rem] text-8xl text-text-white">Barber Studio</h1>
+                    <h2 class=" text-destacado    text-3xl mb-8  ">“Evolve The Way You Think”</h2>
                 </div>
 
                 <div class="hero__copy-btn">
@@ -72,11 +205,11 @@
                         a
                         great cut with the best attention, just as you deserve!”
                     </p>
-                    <button class="w-40 h-8 bg-grad-1 rounded-md">Book Now</button>
+                    <button type="button" class="w-40 h-8 bg-grad-1 rounded-md hover:cursor-pointer">Book Now</button>
                 </div>
             </div>
 
-            <img id="chair" class=" max-xl:hidden      w-[38rem]  h-auto absolute top-[30%] left-[33%] z-10 b  "
+            <img id="chair" class=" max-xl:hidden      w-[38rem]  h-auto absolute top-[30%] left-[33%] z-10  "
                 src="/public/chair.png" alt="chair">
 
             <div id="hero__right"
@@ -113,7 +246,7 @@
             <article id="cards">
                 <div id=" content-cards" class=" w-full max-w-6xl m-auto grid lg:grid-cols-3  gap-10 justify-center ">
 
-                    <div id="card-1  " class="card ">
+                    <div id="card-1  " class="card  card-1">
                         <img src="/public/icon-scissor.svg" alt="scisor icon" class="mb-8">
 
                         <div class=" div-tex__card   gap-3 mb-8  ">
@@ -129,7 +262,7 @@
 
                     </div>
 
-                    <div id="card-2" class="card ">
+                    <div id="card-2" class="card  card2">
                         <img src="/public/icon-bear.svg" alt="beard icon" class="mb-8">
 
                         <div class="text-1 div-tex__card">
@@ -140,7 +273,7 @@
 
                     </div>
 
-                    <div id="card-3" class="card">
+                    <div id="card-3" class="card card3">
                         <img src="/public/icon-motocicle.svg" alt="moto icon" class="mb-8">
 
                         <div class="text-1 div-tex__card ">
@@ -154,7 +287,11 @@
             </article>
         </section>
 
-        <section id="about-me " class=" lg:grid grid-cols-2 content-center w-[96%] m-auto h-screen">
+
+        <!-- section about -->
+
+        <section id="about-me " class=" lg:grid grid-cols-2 content-center w-[96%]  m-auto ">
+
             <article id="date " class="w-96% m-auto p-8">
                 <span class="border-line   "></span>
                 <h2 class="text-8xl max-sm:text-5xl font-principal text-text-white  ">About Me</h2>
@@ -174,83 +311,66 @@
 
 
             <article id="galery" class="lg:w-[43.75em] m-auto ">
-
                 <div class=" grid lg:grid-cols-2 grid-rows-1 gap-1   ">
-                    <figure class="relative  overflow-hidden hover:cursor-pointer max-w-[500px] m-auto "><img
-                            class=" images__about  m-auto scale-[1.2] transition-transform  "
-                            src="/public/avatar1.jpg" alt="Barber">
-                        <figcaption class=" absolute  inset-0 flex flex-col justify-end 
-                              text-text-white
-                               text-2xl
-                                   before:content['']
-                                    before:absolute
-                                     before:top-0
-                                      before:inset-0
-                                       before:bg-gradient-to-l
-                                        from-grad-5
-                                           to-[#151618]
-                                              before:opacity-0  before:transition-opacity   opacity-0 "><main class="flex flex-end "><p class="font-secundario w-[20rem]">"With each cut, you sculpt stories into each strand of hair, creating masterpieces on blank heads."</p></main><footer class="text-destacado text-2xl font-secundario">Wislow Estevez</footer> </figcaption>
+
+                    <figure class="figure_relative "><img class="" src="/public/avatar1.jpg" alt="Barber">
+                        <figcaption class=" fig__animation before:content[''] ">
+                            <main class="flex flex-end ">
+                                <p class="font-secundario w-[20rem] p-4">"With each cut, you sculpt stories into each
+                                    strand of hair, creating masterpieces on blank heads."</p>
+                            </main>
+                        </figcaption>
                     </figure>
-                    <figure><img class="images__about max-w-[500px] m-auto " src="/public/Avatar2.jpg" alt="Barber">
+
+                    <figure class="figure_relative"><img class="img__about " src="/public/Avatar2.jpg" alt="Barber">
+                        <figcaption class=" fig__animation before:content[''] ">
+                            <main class="flex flex-end ">
+                                <p class="font-secundario w-[20rem] p-4">"Your scissors not only cut, they also clear
+                                    the path to self-expression and authenticity."</p>
+                            </main>
+                        </figcaption>
                     </figure>
-                    <figure><img class="images__about max-w-[500px] m-auto" src="/public/Avatar3.jpg" alt="Barber">
+
+                    <figure class="figure_relative"><img class="img__about" src="/public/Avatar3.jpg" alt="Barber">
+                        <figcaption class=" fig__animation before:content[''] ">
+                            <main class="flex flex-end ">
+                                <p class="font-secundario w-[20rem] p-4">"It's not just a haircut, it's a transformation
+                                    experience, and you are the magician who makes it happen."</p>
+                            </main>
+                        </figcaption>
                     </figure>
-                    <figure><img class="images__about max-w-[500px] m-auto" src="/public/Avatar4.jpg" alt="Barber">
+
+                    <figure class="figure_relative"><img class="img__about" src="/public/Avatar4.jpg" alt="Barber">
+                        <figcaption class=" fig__animation before:content[''] ">
+                            <main class="flex flex-end ">
+                                <p class="font-secundario w-[20rem] p-4">"Not only do you cut hair, you also sculpt
+                                    confidence and transform looks with a masterful touch."</p>
+                            </main>
+                        </figcaption>
                     </figure>
+
                 </div>
+            </article>
+        </section>
+
+        <section id="book" class="w-[96%] m-auto  p-4 h-[100-vh] ">
+            <article class="headline">
+                <a class="" href="#"><img class="w-full h-auto" src="/public/Apple Watch.svg" alt="apple-phone"></a>
 
             </article>
-
-
         </section>
     </div>
 </body>
 <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-<style>
+<script src="/js/animation.js"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 
-    figure:hover img{
-        transform: scale(1);
-    }
-
-    figure figcaption:hover{
-        opacity: 1;
-        
-       
-    }
-
-    figure:hover figcaption::before{
-        opacity: 1;
-        
-    }
-    @media (max-width: 764px) {
-        .visible-mobile {
-            position: absolute;
-            top: 980%;
-            left: 6%;
-            display: grid;
-            align-items: center;
-
-
-            width: 88vw;
-            height: 54px;
-            padding: 5px;
-
-
-            border-radius: 10px;
-
-        }
-
-
-    }
-
-
-
-    @media (min-width: 765px) {
-        .hidden-mobile {
-            display: none;
-        }
-    }
-</style>
+<script>
+    ScrollReveal().reveal('.card1', { delay: 1000 });
+    ScrollReveal().reveal('.card2', { delay: 1300 });
+    ScrollReveal().reveal('.card3', { delay: 1500 });
+</script>
 
 </html>
 

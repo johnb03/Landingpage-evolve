@@ -2,30 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components{
+@layer components {
+  .card {
+    @apply w-[340px] sm:max-w-80 h-[480px] bg-blue-light rounded-md p-6 shadow-xl;
+  }
 
-    .card{
-        @apply w-[340px] sm:max-w-80 h-[480px] bg-blue-light rounded-md p-6 shadow-xl ;
-    }
+  .div-tex__card {
+    @apply flex flex-col  justify-between items-center gap-8;
+  }
 
-    .div-tex__card{
-        @apply flex flex-col  justify-between items-center gap-8;
-    }
+  .service {
+    @apply text-5xl font-secundario capitalize text-text-white md:text-3xl;
+  }
 
-    .service{
-        @apply text-5xl font-secundario capitalize text-text-white md:text-3xl;
-    }
+  .price {
+    @apply text-4xl font-secundario text-destacado;
+  }
 
-    .price{
-        @apply text-4xl font-secundario text-destacado;
-    }
+  .border-line {
+    @apply inline-block w-52 border-b border-color-hover;
+  }
 
-    .border-line{
-        @apply inline-block w-52 border-b border-color-hover;
-    }
+  .img__about {
+    @apply w-full h-auto  aspect-[3/3] object-cover m-auto scale-[1.2] transition-transform;
+  }
 
+  .fig__animation {
+    @apply absolute  inset-0 flex flex-col justify-end   text-text-white text-2xl before:absolute before:top-0 before:inset-0 before:bg-gradient-to-l from-grad-5 to-[#151618] before:opacity-0 before:transition-opacity opacity-0;
+  }
 
-    .images__about{
-        @apply w-full h-auto  aspect-[3/3] object-cover;
-    }
+  .figure_relative {
+    @apply relative  overflow-hidden hover:cursor-pointer max-w-[500px] m-auto;
+  }
 }
