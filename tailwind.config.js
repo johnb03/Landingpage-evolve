@@ -9,8 +9,6 @@ module.exports = {
       "text-black": "#001011",
       "destacado":"#D9A648 ",
       "blue-light":"rgba(28, 31, 42, 0.67)",
-      "blue-dark-2":"#1C1F2A",
-      "text-2":"#A5A1A1",
       "color-hover": "#D9A648 ",
      "grad-1": "#D7C187 ",
        "grad-2": "#8C7741 ",
